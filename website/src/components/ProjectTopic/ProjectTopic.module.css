@@ -1,0 +1,13 @@
+.item, .title {
+    display: block;
+}
+
+.title {
+    font-weight: bold;
+    transition: 75ms;
+    /* scale: 110; */
+}
+
+.titleProject {
+    text-shadow: 5px 5px #558ABB;
+}

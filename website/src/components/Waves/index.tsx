@@ -1,9 +1,36 @@
 import styles from "./Waves.module.css";
 
-export const Waves = () => {
+interface wavesProps {
+  flip?: boolean;
+  top?: boolean;
+}
+
+export const Waves = (props: wavesProps) => {
+  console.log(props);
+  console.log(props.top);
+  let classes =  '';
+  if (props.top) {
+    classes += 'top-0 '
+  }else {
+    classes += 'bottom-0 '
+  }
+
+  if (props.flip) {
+    classes += 'rotate-180'
+  }else {
+    classes += 'rotate-0'
+  }
+
+  // classes = props.flip  ? "rotate-180 " : '';
+  // classes += " " + props.top ? "top-0" : "bottom-0";
+console.log(classes);
+
   return (
     <svg
-      className={styles.waves + " bottom-0 h-full w-full"}
+      className={
+        styles.waves +
+        " h-full w-full " + classes
+      }
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 24 150 28"
