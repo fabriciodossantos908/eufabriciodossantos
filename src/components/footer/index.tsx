@@ -4,6 +4,11 @@ type ProjectsProps = {
   children?: React.ReactNode;
 };
 
+function openLink(){
+  window.open('https://wa.me/5511932313806?text=Ol%C3%A1+mundo%21', "_blank");
+
+}
+
 export const Footer = (props: ProjectsProps) => {
   return (
     <div className="relative w-full min-h-[15rem] h-auto bg-primary-color">
@@ -54,7 +59,7 @@ export const Footer = (props: ProjectsProps) => {
           lg:hover:bg-secondary-color md:hover:bg-secondary-color sm:hover:bg-secondary-color
             lg:hover:scale-90 md:hover:scale-90 sm:hover:scale-90
             transition delay-75"
-          >
+          onClick={openLink} >
             entrar em contato
             <img src={leftArrow} alt="" className="w-2/12 ml-2" />
           </button>
